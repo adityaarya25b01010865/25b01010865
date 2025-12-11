@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Product Page</title>
+    <style>
+        body{
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .card{
+            width: 700px;
+            background: #fff;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .main-img{
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .main-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbs{
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumbs img{
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid #bbb;
+            transition: 0.3s;
+        }
+
+        .thumbs img:hover{
+            transform: scale(1.05);
+        }
+
+        .title{
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .price{
+            font-size: 22px;
+            color: #2b6cff;
+            margin: 5px 0;
+        }
+
+        .old-price{
+            text-decoration: line-through;
+            color: gray;
+            font-size: 14px;
+        }
+
+        .btn{
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .buy{
+            background: #2b6cff;
+            color: #fff;
+        }
+
+        .wish{
+            background: #fff;
+            border: 1px solid #2b6cff;
+            color: #2b6cff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- Main rolex watchs Image -->
+    <div class="main-img" id="mainImgBox">
+        <img id="mainImg" src="https://www.rado.com/media/sgecom_contentsystem/PDP_Images/True_Round_R27115022_5000X3756.jpg?im=Resize=(1024,682),aspect=fill;Crop=(0,0,1024,682),gravity=Center" alt="rolex watch">
+    </div>
+
+    <!-- rolex  watchThumbnails -->
+    <div class="thumbs">
+        <img src="https://monochrome-watches.com/wp-content/uploads/2024/03/Rado-True-Round-Open-Heart-high-tech-ceramic-plasma-collection-2024-hands-on-3.jpg" onclick="swap(this)">
+        <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/6e5de5bc3d185d8179cdc7258143f41a/r/a/rado-true-round-r27115012-large.jpg" onclick="swap(this)">
+        <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/6e5de5bc3d185d8179cdc7258143f41a/j/a/jacob-co-bugatti-chiron-tb-bu200-40-aa-aa-bbrua-multiple-1_1.jpg" onclick="swap(this)">
+    </div>
+
+    <!-- Details -->
+    <h2 class="title">roleex watch – Premium Edition</h2>
+
+    <div class="price">₹20,80,000</div>
+    <div class="old-price">₹28,00,000</div>
+
+    <p>
+        premium edition watch,
+    </p>
+
+    <button class="btn buy">Add to Cart</button>
+    <button class="btn wish">Wishlist</button>
+
+</div>
+
+<script>
+    function swap(img){
+        document.getElementById("mainImg").src = img.src;
+    }
+</script>
+
+</body>
+</html>
